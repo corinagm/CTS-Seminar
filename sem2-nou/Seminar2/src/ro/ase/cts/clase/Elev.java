@@ -29,13 +29,17 @@ public class Elev extends Aplicant{
 	}
 	
 	
-	@Override
+	
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
+/*	@Override
 	public String toString() {
 		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
 				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
 				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
 	}
-	
+	*/
 	public Elev() {
 		super();
 	}
@@ -45,6 +49,17 @@ public class Elev extends Aplicant{
 		super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
 		this.clasa = clasa;
 		this.tutore = tutore;
+	}
+	
+	public String toString() {
+		StringBuilder stringbuilder=new StringBuilder();
+		
+		stringbuilder.append("Angajat: ")
+		.append(super.toString()).append(" nume").append(nume)
+		.append(" prenume ").append(prenume)
+		.append(" varsta ").append(varsta)
+		.append(" punctaj ").append(punctaj);
+	return stringbuilder.toString();
 	}
 
 	
