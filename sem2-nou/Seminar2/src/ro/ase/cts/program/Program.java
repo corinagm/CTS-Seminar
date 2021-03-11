@@ -18,7 +18,10 @@ public class Program {
 		try {
 			listaAplicanti = citesteAplicanti(new AngajatiReader("angajati.txt"));
 			for(Aplicant aplicant:listaAplicanti)
-				System.out.println(aplicant.toString());
+				{
+				System.out.println(aplicant.toString());				
+				System.out.println(aplicant);
+				}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
